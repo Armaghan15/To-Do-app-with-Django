@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Update Task</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<style>
+		
+		body {
+			background-color: rgb(79, 79, 232); 
+		}
+
+		
+		h1{
+			text-align: center;
+			color: #007bff;
+		}
+
+		.center-column {
+			width: 600px;
+			margin: 85px auto;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 3px;
+			box-shadow: 6px 2px 30px 0px rgba(0, 0, 0, 0.75);
+		}
+
+		.form-item {
+			margin-left: 150px;
+			margin-top: 30px;
+		}
+
+
+	</style>
+
+</head>
+<body>
+
+	<div class="center-column">
+		<h1>Edit Task</h1>
+			<form method="POST" action="" class="form-item">
+				{% csrf_token %}
+				Title {{form.title}}<br>
+				<hr>
+				Completed {{form.completed}}<br>
+				<hr>
+				<input style="margin-left: 90px;" class="btn btn-primary" type="submit" name="update_task" value="Update">
+			</form>
+	</div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
